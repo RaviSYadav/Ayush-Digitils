@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="text_color">#FF000000</color>
+    <color name="bg_color">#F9F9F9</color>
+    <color name="finance_bg_color">#38DD0808</color>
+
+    <!---  dashboard icon color  -->
+    <color name="dashboard_icon_color">#4d8a7a</color>
+    <color name="dashboard_icon_bg_color">#384d8a7a</color>
+
+    <!---  dashboard icon color  -->
+
+
+    <color name="chip_selected">#F0EEEF</color>
+    <color name="chip_unselected">#797979</color>
+
+
+    <color name="invoice_view_bg">#EDEDED</color>
+</resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.profile.support.SupportFragment">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_support_contact_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Support Contact"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_14"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_5"
+                android:paddingBottom="@dimen/dimen_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_support_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem"/>
+            <View
+                android:id="@+id/view_div_support_contact"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_support_contact" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_support_email_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Support Contact"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_14"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_5"
+                android:paddingBottom="@dimen/dimen_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_support_contact"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_support_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_support_contact"
+                tools:text="@tools:sample/lorem"/>
+            <View
+                android:id="@+id/view_div_support_email"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_support_email" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_support_address_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Support Contact"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_14"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_5"
+                android:paddingBottom="@dimen/dimen_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_support_email"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_support_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_support_email"
+                tools:text="@tools:sample/lorem"/>
+            <View
+                android:id="@+id/view_div_support_address"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_support_address" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

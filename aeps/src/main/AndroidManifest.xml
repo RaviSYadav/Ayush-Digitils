@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <queries>
+        <package android:name="com.mantra.rdservice" />
+        <package android:name="com.acpl.registersdk" />
+        <package android:name="com.tatvik.bio.tmf20" />
+        <package android:name="com.secugen.rdservice" />
+        <package android:name="com.evolute.rdservice" />
+        <package android:name="com.scl.rdservice" />
+
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="image/jpeg" />
+        </intent>
+    </queries>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+
+    <application android:theme="@style/Theme.MyApplication">
+
+
+        <activity
+            android:name=".AEPSHomeActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

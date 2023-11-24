@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/dimen_20"
+    android:background="#FFFFFF">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lbl_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bank_warning"
+        android:padding="@dimen/dimen_10"
+        android:textSize="@dimen/txt_dimen_16"
+        android:singleLine="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_2"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:background="@color/design_default_color_primary_dark"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_warning" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/operator_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dimen_15"
+        android:layout_margin="@dimen/dimen_10"
+        android:paddingHorizontal="@dimen/dimen_5"
+        android:background="@color/dashboard_icon_bg_color"
+        app:layout_constraintTop_toBottomOf="@+id/header_view"
+        tools:layout_editor_absoluteX="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_art"
+            android:layout_width="@dimen/dimen_35"
+            android:layout_height="@dimen/dimen_35"
+            android:background="@drawable/ic_circle_bg"
+            android:elevation="@dimen/dimen_10"
+            android:padding="@dimen/dimen_5"
+            android:src="@drawable/ic_bank"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_transaction_amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lbl_account"
+            tools:src="@drawable/ic_bank" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:fontFamily="@font/bw_modelica_bold"
+            android:textSize="@dimen/txt_dimen_13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_art"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Axis Finance Limited"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_beneficiary_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bw_modelica_bold"
+            android:textSize="@dimen/txt_dimen_11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lbl_account"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_account"
+            tools:text="Axis Finance Limited" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_beneficiary_bank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bw_modelica_bold"
+            android:textSize="@dimen/txt_dimen_11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lbl_account"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_beneficiary_name"
+            tools:text="Axis Finance Limited" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_transaction_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bw_modelica_bold"
+            android:textSize="@dimen/txt_dimen_11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lbl_account"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_beneficiary_bank"
+            tools:text="Axis Finance Limited" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_join"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_56"
+        android:layout_margin="@dimen/dimen_10"
+        android:text="Confirm"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operator_container" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_56"
+        android:layout_margin="@dimen/dimen_10"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_join"
+        app:layout_constraintTop_toBottomOf="@+id/operator_container" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

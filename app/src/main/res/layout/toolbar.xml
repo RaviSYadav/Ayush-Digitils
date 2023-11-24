@@ -1,0 +1,77 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="@dimen/dimen_12"
+    android:background="@color/dashboard_icon_color"
+    android:layout_height="?attr/actionBarSize"
+    app:layout_scrollFlags="scroll|enterAlways">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintEnd_toStartOf="@+id/img_logout"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_profile"
+            android:layout_width="@dimen/dimen_36"
+            android:layout_height="@dimen/dimen_36"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher"
+            android:padding="@dimen/dimen_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+            tools:src="@tools:sample/avatars" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lbl_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:textSize="@dimen/txt_dimen_14"
+            android:textStyle="normal"
+            android:fontFamily="@font/bw_modelica_bold"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/img_profile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="@tools:sample/full_names" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lbl_user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_dimen_12"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/dimen_12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_name"
+            app:layout_constraintStart_toEndOf="@+id/lbl_name"
+            tools:text="@tools:sample/date/ddmmyy" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@drawable/ic_login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

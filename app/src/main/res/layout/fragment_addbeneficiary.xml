@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.beneficiary.add.AddBeneficiaryFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/retailer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_15"
+        android:paddingBottom="@dimen/dimen_30"
+        android:background="@drawable/ic_rect_top_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/operator_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_15"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back_3d"
+                app:tint="@color/white"
+                android:elevation="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_back_3d" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Beneficiary"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_15"
+                android:fontFamily="@font/bw_modelica_bold"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:paddingStart="@dimen/dimen_30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_back"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+                tools:text="Money Transfer"
+                tools:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_art"
+                android:layout_width="@dimen/dimen_35"
+                android:layout_height="@dimen/dimen_35"
+                android:background="@drawable/ic_circle_bg"
+                android:elevation="@dimen/dimen_10"
+                android:padding="@dimen/dimen_5"
+                android:src="@drawable/ic_dmt"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_remitter_num"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/lbl_remitter_name"
+                tools:src="@drawable/ic_dmt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_remitter_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:fontFamily="@font/bw_modelica_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_13"
+                android:layout_marginTop="@dimen/dimen_15"
+                app:layout_constraintEnd_toStartOf="@id/lbl_max_amount"
+                app:layout_constraintStart_toEndOf="@+id/iv_art"
+                app:layout_constraintTop_toBottomOf="@+id/iv_back"
+                tools:text="Axis Finance Limited"
+                tools:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_remitter_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bw_modelica_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_11"
+                app:layout_constraintBottom_toBottomOf="@id/iv_art"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lbl_remitter_name"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_remitter_name"
+                tools:text="Axis Finance Limited"
+                tools:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_max_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:fontFamily="@font/bw_modelica_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lbl_remitter_name"
+                tools:text="25000"
+                tools:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_min_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:fontFamily="@font/bw_modelica_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/lbl_remitter_num"
+                tools:text="25000"
+                tools:textColor="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/retailer_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/dimen_15">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_beneficiary_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="Beneficiary Mobile *">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_beneficiary_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:digits="0123456789"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_acc_holder_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/til_beneficiary_mobile"
+                android:hint="Account Holder Name *">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_acc_holder_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/til_acc_holder_name"
+                android:hint="Select Bank *">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:focusable="false"
+                    android:editable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_ifsc_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/til_bank"
+                android:hint="Ifsc Code *">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_ifsc_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_account_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/til_ifsc_code"
+                android:hint="Bank Account Number *">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_account_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:digits="0123456789"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verify"
+                android:textColor="#6765E8"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_account_number"
+                android:layout_marginTop="15dp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/black"
+                android:text="proceed"
+                android:clickable="true"
+                android:layout_marginTop="30dp"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@+id/til_account_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

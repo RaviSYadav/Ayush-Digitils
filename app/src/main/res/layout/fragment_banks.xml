@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.bank.BanksFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"
+        android:text="Select Bank"
+        android:layout_gravity="center_vertical"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view_banks"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_50"
+            app:queryHint="search banks...."
+            android:layout_marginTop="@dimen/dimen_10"
+            app:layout_constraintStart_toEndOf="@+id/lbl_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#706E6E"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_operator"/>
+
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/rvBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="@dimen/dimen_8"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        tools:listitem="@layout/view_holder_item_banks"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/view1"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="65"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

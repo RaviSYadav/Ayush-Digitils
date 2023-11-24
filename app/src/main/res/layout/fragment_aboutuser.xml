@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.profile.about.AboutUserFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_account_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_14"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_5"
+                android:paddingBottom="@dimen/dimen_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem"/>
+
+
+
+
+            <View
+                android:id="@+id/view_div_lang"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_user_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_mobile_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_14"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_5"
+                android:paddingEnd="@dimen/dimen_24"
+                android:text="Mobile"
+                android:paddingBottom="@dimen/dimen_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_lang"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingEnd="@dimen/dimen_24"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_lang"
+                tools:text="@tools:sample/lorem"/>
+            
+            <View
+                android:id="@+id/img_div_telegram"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_mobile" />
+            
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_email_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_14"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_5"
+                android:paddingBottom="@dimen/dimen_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_div_telegram" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="20dp"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_div_telegram"
+                tools:text="@tools:sample/lorem"/>
+            
+
+            <View
+                android:id="@+id/img_div_faq"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_email" />
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_address_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_14"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_5"
+                android:paddingBottom="@dimen/dimen_5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_div_faq"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="20dp"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_div_faq"
+                tools:text="@tools:sample/lorem"/>
+
+
+            <View
+                android:id="@+id/img_div_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_email" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:textStyle="normal"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="20dp"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_div_privacy"
+                tools:text="@tools:sample/lorem"/>
+            
+            <View
+                android:id="@+id/img_div_terms"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_terms" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

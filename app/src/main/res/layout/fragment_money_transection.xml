@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.payment.ayushdigitils.ui.fragments.transection.MoneyTransactionFragment"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/retailer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_10"
+        android:paddingBottom="@dimen/dimen_30"
+        android:background="@drawable/ic_rect_top_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/beneficiary_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_15"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="10dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back_3d"
+                android:elevation="@dimen/dimen_10"
+                app:tint="@color/white"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_back_3d" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Money Transfer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_15"
+                android:fontFamily="@font/bw_modelica_bold"
+                android:layout_marginStart="@dimen/dimen_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_bak"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_bak"
+                tools:text="Money Transfer"
+                tools:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_art"
+                android:layout_width="@dimen/dimen_35"
+                android:layout_height="@dimen/dimen_35"
+                android:background="@drawable/ic_circle_bg"
+                android:elevation="@dimen/dimen_10"
+                android:padding="@dimen/dimen_5"
+                android:src="@drawable/ic_dmt"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_beneficiary_bank"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/lbl_remitter_name"
+                tools:src="@drawable/ic_dmt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_remitter_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bw_modelica_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_13"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_art"
+                app:layout_constraintTop_toBottomOf="@+id/iv_back"
+                tools:text="Axis Finance Limited"
+                tools:textColor="@color/white" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_remitter_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bw_modelica_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_11"
+                android:layout_marginTop="@dimen/dimen_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lbl_remitter_name"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_remitter_name"
+                tools:text="Axis Finance Limited"
+                tools:textColor="@color/white" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_beneficiary_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bw_modelica_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_11"
+                android:layout_marginTop="@dimen/dimen_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lbl_remitter_num"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_remitter_num"
+                tools:text="Axis Finance Limited"
+                tools:textColor="@color/white" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_beneficiary_account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bw_modelica_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_11"
+                android:layout_marginTop="@dimen/dimen_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lbl_beneficiary_name"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_beneficiary_name"
+                tools:text="Axis Finance Limited"
+                tools:textColor="@color/white" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_beneficiary_ifsc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bw_modelica_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_11"
+                android:layout_marginTop="@dimen/dimen_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lbl_beneficiary_account"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_beneficiary_account"
+                tools:text="Axis Finance Limited"
+                tools:textColor="@color/white" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_beneficiary_bank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bw_modelica_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_11"
+                android:layout_marginTop="@dimen/dimen_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lbl_beneficiary_ifsc"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_beneficiary_ifsc"
+                tools:text="Axis Finance Limited"
+                tools:textColor="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/retailer_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingHorizontal="@dimen/dimen_15">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_transaction_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="Transaction Amount *">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_transaction_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_transaction_via"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/til_transaction_amount">
+
+            <AutoCompleteTextView
+                android:id="@+id/spin_transaction_via"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Transaction via"
+                android:inputType="textCapWords" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_transaction_mode"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_transaction_via">
+
+            <AutoCompleteTextView
+                android:id="@+id/spin_transaction_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="Transaction Mode"
+                android:inputType="textCapWords" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_transaction_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/til_transaction_mode"
+            android:hint="T Pin *">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_transaction_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:inputType="numberPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_proceed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:text="Proceed"
+            android:clickable="true"
+            android:layout_marginTop="30dp"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@+id/til_transaction_pin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

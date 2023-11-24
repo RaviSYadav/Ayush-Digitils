@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dimen_10"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_input_from_and_to_date"
+        android:textSize="@dimen/txt_dimen_14"
+        android:fontFamily="@font/bw_modelica_medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dimen_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textColor="@color/black"
+        tools:text="@string/please_input_from_and_to_date" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_time_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_time_title">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_28"
+            android:layout_weight="1"
+            android:background="@drawable/ractanle_semi_black"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFromDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00AAAAAA"
+                android:drawablePadding="@dimen/dimen_5"
+                android:fontFamily="@font/bw_modelica_medium"
+                android:gravity="center_vertical"
+                android:hint="From"
+                android:paddingStart="10dp"
+                android:textColor="@color/dashboard_icon_color"
+                android:textColorHint="@color/dashboard_icon_color"
+                android:textSize="@dimen/txt_dimen_10"
+                app:drawableStartCompat="@drawable/ic_calender" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:background="@drawable/ractanle_semi_black"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvToDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00AAAAAA"
+                android:drawableStart="@drawable/ic_calender"
+                android:drawablePadding="@dimen/dimen_5"
+                android:fontFamily="@font/bw_modelica_medium"
+                android:gravity="center_vertical"
+                android:hint="To"
+                android:paddingStart="@dimen/dimen_10"
+                android:textColor="@color/dashboard_icon_color"
+                android:textColorHint="@color/dashboard_icon_color"
+                android:textSize="@dimen/txt_dimen_10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_status_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_select_one_status_from_below_list"
+        android:textSize="@dimen/txt_dimen_14"
+        android:fontFamily="@font/bw_modelica_medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dimen_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_time_container"
+        tools:textColor="@color/black"
+        tools:text="@string/please_select_one_status_from_below_list" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimen_10"
+        android:paddingVertical="@dimen/dimen_5"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_status_title">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_main_answers"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/lbl_speed_0_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Success"
+                android:tag="0.5"
+                android:button="@null"
+                android:paddingEnd="@dimen/dimen_100"
+                android:drawablePadding="@dimen/dimen_20"
+                android:drawableStart="@drawable/selection_speed_icon"/>
+
+            <RadioButton
+                android:id="@+id/lbl_speed_0_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:tag="0.9"
+                android:button="@null"
+                android:paddingEnd="@dimen/dimen_100"
+                android:drawablePadding="@dimen/dimen_20"
+                android:drawableStart="@drawable/selection_speed_icon"/>
+
+            <RadioButton
+                android:id="@+id/lbl_speed_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Failed"
+                android:tag="1.0"
+                android:button="@null"
+                android:drawablePadding="@dimen/dimen_20"
+                android:paddingEnd="@dimen/dimen_100"
+                android:drawableStart="@drawable/selection_speed_icon"/>
+
+            <RadioButton
+                android:id="@+id/lbl_speed_1_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accept"
+                android:tag="1.2"
+                android:button="@null"
+                android:drawablePadding="@dimen/dimen_20"
+                android:paddingEnd="@dimen/dimen_100"
+                android:drawableStart="@drawable/selection_speed_icon"/>
+
+            <RadioButton
+                android:id="@+id/lbl_speed_1_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reversed"
+                android:tag="1.5"
+                android:button="@null"
+                android:drawablePadding="@dimen/dimen_20"
+                android:paddingEnd="@dimen/dimen_100"
+                android:drawableStart="@drawable/selection_speed_icon"/>
+
+            <RadioButton
+                android:id="@+id/lbl_speed_1_75"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refunded"
+                android:tag="1.75"
+                android:button="@null"
+                android:drawablePadding="@dimen/dimen_20"
+                android:paddingEnd="@dimen/dimen_100"
+                android:drawableStart="@drawable/selection_speed_icon"/>
+
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

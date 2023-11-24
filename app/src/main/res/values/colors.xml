@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimaryVariant">#FFFFFFFF</color>
+
+
+    <color name="colorHint">#384d8a7a</color>
+    <color name="colorFlLabelActivated">#4d8a7a</color>
+
+    <color name="text_color">#FF000000</color>
+    <color name="bg_color">#F9F9F9</color>
+    <color name="finance_bg_color">#38DD0808</color>
+
+    <!---  dashboard icon color  -->
+    <color name="dashboard_icon_color">#4d8a7a</color>
+    <color name="dashboard_icon_bg_color">#384d8a7a</color>
+    <color name="float_icon_bg_color">@color/dashboard_icon_color</color>
+
+    <!---  dashboard icon color  -->
+
+
+    <color name="invoice_view_bg">#EDEDED</color>
+
+
+    <color name="textGreen">#4CAF50</color>
+    <color name="textRed">#C51306</color>
+    <color name="text_gray">#7b8994</color>
+    <color name="text_yellow">#FFC107</color>
+    <color name="textBlack">#000000</color>
+    <color name="colorDivider">#707070</color>
+    <color name="dividerProfile">#E2E2E2</color>
+
+
+    <color name="blue_light">#C3D1D2</color>
+    <color name="orange">#DC5947</color>
+    <color name="green">#26BC8F</color>
+    <color name="green_light">#53AD55</color>
+    <color name="purple">#6C6CC6</color>
+    <color name="blue">#00BBE1</color>
+    <color name="blue_dark">#4F7CD1</color>
+    <color name="yellow">#E9A63B</color>
+</resources>

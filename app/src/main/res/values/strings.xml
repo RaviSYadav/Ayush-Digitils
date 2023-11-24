@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Ayush Digitils</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="enter_mobil">Enter Mobile Number  *</string>
+    <string name="select_oper">Select Operator</string>
+    <string name="browse_plan">Browse Plans</string>
+    <string name="best_offers">Best Offers</string>
+    <string name="recharge">Recharge</string>
+    <string name="enter_amoun">Enter Amount</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="didn_t_you_receive_the_otp_resend_otp">Didn’t you receive the OTP? Resend OTP</string>
+
+
+    <string name="remitter_full_name">%s %s</string>
+
+    <string name="Rs">\u20B9</string>
+    <string name="bank_warning">Please confirm the bank, account number and amount. Transfers will not reverse in any circumstances.</string>
+    <string name="recharge_warning">Please confirm the operator, number, and amount. The wrong recharge will not be reversed under any circumstances.</string>
+
+    <string name="search_articles_hint">Search</string>
+    <string name="please_input_from_and_to_date">Please input from and to date</string>
+    <string name="please_select_one_status_from_below_list">Please select one status from below list</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_t_pin">Change\\Generate T-Pin</string>
+    <string name="faq_s">FAQ\'s</string>
+    <string name="logout">Logout</string>
+    <string name="privacy_policy">Privacy Policy</string>
+</resources>

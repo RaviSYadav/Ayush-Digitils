@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.prepaid.PrepaidRechargeFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_art"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginEnd="-150dp"
+        android:src="@drawable/ic_podcast_3d_girl"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/dimen_19"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_back_3d"
+        android:elevation="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginStart="@dimen/dimen_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_back_3d" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_rect_prepaid_bg"
+        app:layout_constraintTop_toBottomOf="@+id/img_art"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_prepaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_dimen_22"
+            android:text="Prepaid"
+            android:fontFamily="@font/bw_modelica_extra_bold"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_25"
+            android:paddingHorizontal="@dimen/dimen_10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contact_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:background="@drawable/edittext_rect"
+            android:paddingVertical="@dimen/dimen_15"
+            android:paddingHorizontal="@dimen/dimen_10"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_prepaid">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_mobile_number"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="@string/enter_mobil"
+                android:background="@null"
+                android:inputType="phone"
+                android:digits="0123456789"
+                app:endIconMode="clear_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_call"
+                android:scaleType="fitXY"
+                android:padding="@dimen/dimen_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                tools:src="@drawable/ic_call"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lbl_operator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            app:layout_constraintTop_toBottomOf="@+id/contact_container"
+            android:hint="Select Provider  *">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_operator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:focusable="false"
+                android:editable="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lbl_recharge_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_operator"
+            android:hint="Enter Amount *">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_recharge_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:digits="0123456789"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_view_plans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Plans"
+            android:textColor="#6765E8"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_recharge_amount"
+            android:layout_marginTop="15dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_recharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recharge"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bw_modelica_medium"
+            android:background="@drawable/ic_recharge_button_bg"
+            android:layout_marginTop="@dimen/dimen_50"
+            android:layout_marginBottom="@dimen/dimen_30"
+            android:layout_marginHorizontal="@dimen/dimen_20"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_recharge_amount"/>
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

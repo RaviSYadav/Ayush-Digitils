@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_invoice"
+    app:startDestination="@id/invoiceFragment">
+
+    <action
+        android:id="@+id/action_global_invoiceFragment"
+        app:destination="@id/invoiceFragment"
+        app:enterAnim="@anim/from_aeps_right"
+        app:exitAnim="@anim/to_aeps_left"
+        app:popEnterAnim="@anim/from_aeps_left"
+        app:popExitAnim="@anim/to_aeps_right"/>
+
+    <fragment
+        android:id="@+id/invoiceFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.invoice.InvoiceFragment"
+        android:label="fragment_invoice"
+        tools:layout="@layout/fragment_invoice" >
+
+
+
+        <argument
+            android:name="invoiceStatus"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="invoiceMessage"
+            app:argType="string"
+            app:nullable="false" />
+
+    </fragment>
+</navigation>

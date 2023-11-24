@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_report"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/dimen_15"
+    android:paddingHorizontal="@dimen/dimen_15"
+    android:layout_marginTop="@dimen/dimen_5"
+    android:layout_marginHorizontal="@dimen/dimen_5"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_account_rectangle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPlanPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/plan_price_bg"
+            android:fontFamily="@font/bw_modelica_medium"
+            android:paddingHorizontal="@dimen/dimen_15"
+            android:paddingVertical="@dimen/dimen_3"
+            tools:text="300"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_26"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:background="@drawable/primary_border_red"
+            android:text="Select"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tvPlanPrice"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:background="@color/text_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tvDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_weight="8.5"
+                android:fontFamily="@font/bw_modelica_light"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                tools:text="Now get truly Unlimited Local/NationalNow get truly Unlimited Local/NationalNow get truly Unlimited Local/National "
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/imgExpand"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="bottom|end">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_25"
+                    android:layout_height="@dimen/dimen_25"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:background="@drawable/ic_information"
+                    android:backgroundTint="@color/text_gray"
+                    android:padding="@dimen/dimen_5"
+                    android:textAllCaps="false"
+                    app:tint="@color/white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--            -->
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

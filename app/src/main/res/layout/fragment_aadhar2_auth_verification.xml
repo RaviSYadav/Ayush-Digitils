@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.aadhar2fa.Aadhaar2AuthVerificationFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lbl_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Daily Security Pass to use Aadhaar based service"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="@dimen/dimen_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lbl_2fa_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="As per regulatory guidelines You need to confirm your Identity daily for once"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:paddingHorizontal="@dimen/dimen_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_heading" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_result"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_120"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="aadhaar_verification.json"
+        app:lottie_loop="false"
+        app:lottie_speed="1.25"
+        android:paddingTop="-10dp"
+        android:elevation="1dp"
+        android:paddingVertical="@dimen/dimen_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_2fa_description"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Select Scanner Device"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:paddingTop="13dp"
+        android:paddingHorizontal="20dp"
+        android:drawableLeft="@drawable/ic_touch_id"
+        android:drawableTint="@color/black"
+        android:drawablePadding="4dp"
+        android:background="@color/dashboard_icon_bg_color"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lav_result"
+        tools:text="Please Select Scanner Device" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_choose_you_device"
+        android:textSize="10sp"
+        android:paddingTop="4dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="13dp"
+        android:paddingHorizontal="20dp"
+        android:background="@color/dashboard_icon_bg_color"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_device"
+        tools:text="@string/please_choose_you_device" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_aadhaar_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:hint="Aadhaar Number"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_description"
+        app:startIconDrawable="@drawable/ic_id_card"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_aadhar_number"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_gender"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:layout_constraintEnd_toEndOf="@+id/layout_aadhaar_input"
+        app:layout_constraintStart_toStartOf="@+id/layout_aadhaar_input"
+        app:layout_constraintTop_toBottomOf="@+id/layout_aadhaar_input">
+
+        <AutoCompleteTextView
+            android:id="@+id/spin_aeps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="Select Aeps"
+            android:inputType="textCapWords"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkBox_aadhaar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="I Accept to Aadhaar Consent"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/layout_aadhaar_input"
+        app:layout_constraintTop_toBottomOf="@+id/til_gender"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        android:text="Submit"
+        android:clickable="true"
+        android:layout_marginTop="30dp"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_aadhaar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

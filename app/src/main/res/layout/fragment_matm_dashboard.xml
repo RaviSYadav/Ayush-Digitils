@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dashboard_icon_bg_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.mtam.MATMDashboardFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_back_3d"
+        android:elevation="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginStart="@dimen/dimen_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_back_3d" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_result"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="matm.json"
+        app:lottie_loop="false"
+        app:lottie_speed="1.25"
+        android:paddingTop="-10dp"
+        android:elevation="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_rect_prepaid_bg"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Micro ATM"
+            android:textSize="@dimen/txt_dimen_16"
+            android:layout_marginBottom="@dimen/txt_dimen_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="@dimen/dimen_10"
+            app:layout_constraintBottom_toTopOf="@+id/view1"/>
+
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/dashboard_icon_bg_color"
+            android:layout_marginBottom="@dimen/dimen_12"
+            app:layout_constraintBottom_toTopOf="@+id/chipGroup_device"
+            />
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="@dimen/dimen_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:selectionRequired="true"
+            app:singleSelection="true"
+            app:layout_constraintBottom_toTopOf="@+id/view2">
+        </com.google.android.material.chip.ChipGroup>
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/dashboard_icon_bg_color"
+            android:layout_marginBottom="@dimen/dimen_15"
+            app:layout_constraintBottom_toTopOf="@+id/chipGroup_transactions"
+            />
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup_transactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="@dimen/dimen_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:selectionRequired="true"
+            app:singleSelection="true"
+            app:layout_constraintBottom_toTopOf="@+id/view3"/>
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/dashboard_icon_bg_color"
+            android:layout_marginBottom="@dimen/dimen_15"
+            app:layout_constraintBottom_toTopOf="@+id/lbl_amount"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lbl_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/view_amount"
+            android:hint="Enter Amount"
+            tools:visibility="visible">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/view_amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/dashboard_icon_bg_color"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/btn_proceed"
+            tools:visibility="visible"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_proceed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/ic_procced"
+            android:layout_marginEnd="@dimen/dimen_20"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

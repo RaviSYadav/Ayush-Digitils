@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/balance_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/dimen_10"
+    android:paddingHorizontal="@dimen/dimen_10"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/ic_main_balance_bg">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_emv_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/iv_emv_chip"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/iv_emv_chip" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_contactless_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_contactless_indicator"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="@dimen/dimen_20"
+        app:layout_constraintStart_toEndOf="@+id/iv_emv_chip"
+        app:layout_constraintTop_toTopOf="@+id/iv_emv_chip"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_emv_chip"
+        tools:src="@drawable/ic_contactless_indicator" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lbl_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:gravity="start"
+        android:maxLines="3"
+        android:singleLine="true"
+        android:lineSpacingMultiplier="0.90"
+        android:textSize="@dimen/txt_dimen_20"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_emv_chip"
+        app:layout_constraintTop_toBottomOf="@+id/iv_emv_chip"
+        app:layout_constraintBottom_toTopOf="@+id/iv_payment_system_logo"
+
+        tools:text="@tools:sample/lorem/random" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lbl_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:gravity="start"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:lineSpacingMultiplier="0.90"
+        android:textSize="@dimen/dimen_16"
+        android:paddingHorizontal="@dimen/dimen_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_payment_system_logo"
+        app:layout_constraintTop_toTopOf="@+id/iv_payment_system_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="@tools:sample/lorem/random" />
+
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_payment_system_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_payment_system_logo"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lbl_amount"
+        tools:src="@drawable/ic_payment_system_logo"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.bills.show.ShowBillFetchedFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/operator_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_10"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingHorizontal="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/txt_dimen_15"
+        app:layout_constraintBottom_toTopOf="@+id/til_consumer_name">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_art"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_circle_bg"
+            android:elevation="@dimen/dimen_10"
+            android:padding="@dimen/dimen_15"
+            android:src="@drawable/ic_loan"
+            tools:src="@drawable/ic_loan"
+            android:tint="@color/dashboard_icon_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_provider_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_dimen_15"
+            android:text="Axis Finance Limited"
+            android:fontFamily="@font/bw_modelica_bold"
+            android:textColor="@color/black"
+
+            android:layout_marginStart="@dimen/dimen_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_art"
+            app:layout_constraintTop_toTopOf="@+id/iv_art"
+            app:layout_constraintBottom_toBottomOf="@id/iv_art"
+            tools:textColor="@color/black"
+            tools:text="Axis Finance Limited" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_consumer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:layout_marginHorizontal="@dimen/dimen_20"
+        app:layout_constraintBottom_toTopOf="@+id/til_due_date"
+        android:hint="Consumer Name">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_consumer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_due_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:layout_marginHorizontal="@dimen/dimen_20"
+        app:layout_constraintBottom_toTopOf="@+id/til_bill_amount"
+        android:hint="Due Date">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_due_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:enabled="true"
+            android:focusable="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_bill_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:layout_marginHorizontal="@dimen/dimen_20"
+        app:layout_constraintBottom_toTopOf="@+id/til_transaction_pin"
+        android:hint="Enter Bill Amount">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_bill_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:digits="0123456789"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_transaction_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="password_toggle"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:layout_marginHorizontal="@dimen/dimen_20"
+        app:layout_constraintBottom_toTopOf="@+id/til_mode"
+        android:hint="T Pin *">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_transaction_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:inputType="numberPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_mode"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:layout_marginHorizontal="@dimen/dimen_20"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+        tools:visibility="visible">
+
+        <AutoCompleteTextView
+            android:id="@+id/lbl_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="Select mode"
+            android:inputType="textCapWords"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:background="@drawable/rect_top_shape"
+        app:backgroundTint="@color/dashboard_icon_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.dmt.invoice.PaySprintDmtInvoiceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/retailer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_10"
+        android:paddingBottom="@dimen/dimen_30"
+        android:background="@drawable/ic_rect_top_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/beneficiary_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_15"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="10dp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_bak"
+                android:layout_width="@dimen/dimen_35"
+                android:layout_height="@dimen/dimen_35"
+                android:elevation="@dimen/dimen_10"
+                android:padding="@dimen/dimen_5"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_15"
+                android:fontFamily="@font/bw_modelica_bold"
+                android:layout_marginStart="@dimen/dimen_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_bak"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_bak"
+                tools:text="Invoice"
+                tools:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_art"
+                android:layout_width="@dimen/dimen_35"
+                android:layout_height="@dimen/dimen_35"
+                android:background="@drawable/ic_circle_bg"
+                android:elevation="@dimen/dimen_10"
+                android:padding="@dimen/dimen_5"
+                android:src="@drawable/ic_dmt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/lbl_remitter_name"
+                tools:src="@drawable/ic_dmt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_remitter_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bw_modelica_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_13"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:layout_marginTop="@dimen/dimen_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_art"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_title"
+                tools:text="Axis Finance Limited"
+                tools:textColor="@color/white" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_remitter_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bw_modelica_regular"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_11"
+                android:layout_marginTop="@dimen/dimen_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lbl_remitter_name"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_remitter_name"
+                tools:text="Axis Finance Limited"
+                tools:textColor="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/retailer_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingHorizontal="@dimen/dimen_15">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_beneficiary_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beneficiary Details"
+            android:fontFamily="@font/bw_modelica_bold"
+            android:textSize="@dimen/txt_dimen_11"
+            android:layout_marginTop="@dimen/dimen_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Axis Finance Limited" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_1"
+            android:background="#EDEDED"/>
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_beneficiary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            tools:listitem="@layout/view_holder_item_beneficiary_invoice"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/invoice_view_bg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_bank_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank Account"
+            android:fontFamily="@font/bw_modelica_bold"
+            android:textSize="@dimen/txt_dimen_11"
+            android:layout_marginTop="@dimen/dimen_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bank Account" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginTop="@dimen/dimen_1"
+            android:background="@color/invoice_view_bg"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            tools:listitem="@layout/view_holder_item_beneficiary_invoice"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/invoice_view_bg" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/invoice_view_bg" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="@dimen/dimen_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/invoice_view_bg"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_key"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Order Id"
+                    android:layout_marginStart="@dimen/dimen_1"
+                    android:fontFamily="@font/bw_modelica_medium"
+                    android:textSize="@dimen/txt_dimen_10"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/dimen_1"
+                    tools:text="Order Id" />
+                <View
+                    android:layout_width="@dimen/dimen_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/invoice_view_bg"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="UTR NO"
+                    android:layout_marginStart="@dimen/dimen_1"
+                    android:fontFamily="@font/bw_modelica_medium"
+                    android:textSize="@dimen/txt_dimen_10"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/dimen_1"
+                    tools:text="UTR NO" />
+                <View
+                    android:layout_width="@dimen/dimen_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/invoice_view_bg"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:layout_marginStart="@dimen/dimen_1"
+                    android:fontFamily="@font/bw_modelica_medium"
+                    android:textSize="@dimen/txt_dimen_10"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/dimen_1"
+                    tools:text="Status" />
+                <View
+                    android:layout_width="@dimen/dimen_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/invoice_view_bg"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:layout_marginStart="@dimen/dimen_1"
+                    android:fontFamily="@font/bw_modelica_medium"
+                    android:textSize="@dimen/txt_dimen_10"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingVertical="@dimen/dimen_1"
+                    tools:text="Amount"/>
+                <View
+                    android:layout_width="@dimen/dimen_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/invoice_view_bg"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EDEDED" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            tools:listitem="@layout/view_holder_item_transaction_invoice_data"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/invoice_view_bg" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_total_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_1"
+            android:fontFamily="@font/bw_modelica_bold"
+            android:textSize="@dimen/txt_dimen_14"
+            android:singleLine="true"
+            android:layout_margin="@dimen/dimen_10"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:paddingVertical="@dimen/dimen_1"
+            android:gravity="end"
+            tools:text="Amount"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_1"
+            android:fontFamily="@font/bw_modelica_bold"
+            android:textSize="@dimen/txt_dimen_14"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:ellipsize="end"
+            android:visibility="gone"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:background="#54DADADA"
+            android:paddingVertical="@dimen/dimen_1"
+            android:textColor="@color/textRed"
+            tools:text="Amount"
+            tools:visibility="visible"/>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

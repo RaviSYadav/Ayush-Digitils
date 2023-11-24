@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" >
+        <item name="floatingActionButtonStyle">@style/FloatingActionButtonStyle</item>
+        <item name="android:statusBarColor">@color/dashboard_icon_color</item> <!-- Set the status bar color -->
+        <item name="colorPrimary">@color/dashboard_icon_color</item> <!-- Set the primary color -->
+        <item name="colorPrimaryDark">@color/dashboard_icon_color</item> <!-- Set the primary dark color -->
+    </style>
+
+    <style name="DialogStyle" parent="Base.Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">97%</item>
+        <item name="android:windowMinWidthMinor">97%</item>
+        <item name="android:background">@color/white</item>
+
+    </style>
+</resources>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF242424"
+    android:fillViewport="true"
+    android:id="@+id/nestedScroll"
+    tools:context=".fragment.invoice.AEPSInvoiceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/status_Container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/invoice_container"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1"
+        tools:background="@drawable/ic_aeps_pending">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:src="@drawable/ic_back_3d"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"
+            tools:src="@drawable/ic_back_3d" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="7dp"
+            android:paddingHorizontal="20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_share"
+            app:layout_constraintStart_toStartOf="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="@+id/iv_back"
+            tools:text="Transfer" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_aeps_circle_bg"
+            android:src="@drawable/ic_aeps_share"
+            android:padding="5dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_back"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+            app:layout_constraintVertical_weight="1"
+            android:visibility="visible"
+            />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_header"
+            tools:src="@drawable/ic_aeps_txn_pending" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_status"
+            tools:text="Your payment has been successfully done." />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_subtitle"
+            tools:text="₹ 5,500" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/invoice_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_Container"
+        app:layout_constraintVertical_weight="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Detail Transactions" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_invoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingHorizontal="10sp"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_transaction"
+            tools:itemCount="5"
+            tools:listitem="@layout/view_holder_item_aeps_invoice" />
+
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_transaction_statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_invoice"
+            tools:text="Detail Transactions" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_weight="2.5"
+            android:paddingVertical="3dp"
+            android:paddingStart="2dp"
+            android:textColor="@color/white"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/lbl_type"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_transaction_statement"
+            app:layout_constraintHorizontal_weight="1"
+            tools:text="Axis Finance Limited" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_weight="2.5"
+            android:paddingVertical="3dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/lbl_date"
+            app:layout_constraintEnd_toStartOf="@+id/lbl_statement_amount"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_transaction_statement"
+            app:layout_constraintHorizontal_weight="1"
+            tools:text="Axis Finance Limited" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_statement_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_weight="2.5"
+            android:paddingVertical="3dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10sp"
+            app:layout_constraintStart_toEndOf="@+id/lbl_type"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_transaction_statement"
+            app:layout_constraintHorizontal_weight="1"
+            tools:text="Axis Finance Limited" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_invoice_statement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingHorizontal="10sp"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_date"
+            tools:itemCount="5"
+            tools:listitem="@layout/view_holder_item_aeps_statement" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_invoice_statement"
+            tools:text="Your payment has been successfully done." />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

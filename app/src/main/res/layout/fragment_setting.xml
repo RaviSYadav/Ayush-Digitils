@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.profile.setting.SettingFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/change_password"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:src="@drawable/ic_title_caret"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_change_password"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_change_password"
+                app:layout_constraintTop_toTopOf="@+id/lbl_change_password" />
+            <View
+                android:id="@+id/view_div_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_change_password" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_change_tpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/change_t_pin"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_change_password"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_change_tpin"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:src="@drawable/ic_title_caret"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_change_tpin"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_change_tpin"
+                app:layout_constraintTop_toTopOf="@+id/lbl_change_tpin" />
+            <View
+                android:id="@+id/view_div_change_tpin"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_change_tpin" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_faqs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/faq_s"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_23"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_change_tpin"
+                tools:visibility="visible"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_faqs"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:src="@drawable/ic_title_caret"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_faqs"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_faqs"
+                app:layout_constraintTop_toTopOf="@+id/lbl_faqs"
+                tools:visibility="visible"/>
+            <View
+                android:id="@+id/view_div_faqs"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:visibility="gone"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_faqs"
+                tools:visibility="visible"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_policy"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_faqs"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:src="@drawable/ic_title_caret"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_privacy_policy"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_privacy_policy"
+                app:layout_constraintTop_toTopOf="@+id/lbl_privacy_policy" />
+            <View
+                android:id="@+id/view_div_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_privacy_policy" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Terms of use"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_privacy_policy"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:src="@drawable/ic_title_caret"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_terms"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_terms"
+                app:layout_constraintTop_toTopOf="@+id/lbl_terms" />
+            <View
+                android:id="@+id/view_div_terms"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_terms" />
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lbl_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/logout"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/txt_dimen_20"
+                android:paddingStart="@dimen/dimen_24"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_23"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_div_terms"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:src="@drawable/ic_title_caret"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_logout"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_logout"
+                app:layout_constraintTop_toTopOf="@+id/lbl_logout" />
+            <View
+                android:id="@+id/view_div_logout"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginStart="@dimen/dimen_24"
+                android:layout_marginEnd="@dimen/dimen_24"
+                android:background="@color/dividerProfile"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_logout" />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

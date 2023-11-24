@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.beneficiary.BeneficiaryFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/retailer_container"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingHorizontal="@dimen/dimen_10"
+       android:paddingBottom="@dimen/dimen_20"
+       android:background="@drawable/ic_rect_top_bg"
+      app:layout_constraintTop_toTopOf="parent">
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/iv_back"
+          android:layout_width="50dp"
+          android:layout_height="30dp"
+          android:src="@drawable/ic_back_3d"
+          android:elevation="@dimen/dimen_10"
+          android:layout_marginTop="@dimen/dimen_10"
+          android:layout_marginStart="@dimen/dimen_10"
+          app:layout_constraintStart_toStartOf="parent"
+          app:tint="@color/white"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:src="@drawable/ic_back_3d" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/operator_container"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="@dimen/dimen_15"
+          app:layout_constraintTop_toBottomOf="@+id/iv_back"
+          android:layout_marginTop="@dimen/dimen_10"
+          tools:layout_editor_absoluteX="10dp">
+
+         <androidx.appcompat.widget.AppCompatImageView
+             android:id="@+id/iv_art"
+             android:layout_width="@dimen/dimen_35"
+             android:layout_height="@dimen/dimen_35"
+             android:background="@drawable/ic_circle_bg"
+             android:elevation="@dimen/dimen_10"
+             android:padding="@dimen/dimen_5"
+             android:src="@drawable/ic_dmt"
+             app:layout_constraintBottom_toBottomOf="@+id/lbl_remitter_num"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="@id/lbl_remitter_name"
+             tools:src="@drawable/ic_dmt" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/lbl_remitter_name"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="@dimen/dimen_12"
+             android:fontFamily="@font/bw_modelica_bold"
+             android:textColor="@color/white"
+             android:textSize="@dimen/txt_dimen_13"
+             app:layout_constraintEnd_toStartOf="@id/lbl_max_amount"
+             app:layout_constraintStart_toEndOf="@+id/iv_art"
+             app:layout_constraintTop_toTopOf="parent"
+             tools:text="Axis Finance Limited"
+             tools:textColor="@color/white" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/lbl_remitter_num"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/bw_modelica_bold"
+             android:textColor="@color/white"
+             android:textSize="@dimen/txt_dimen_11"
+             app:layout_constraintBottom_toBottomOf="@id/iv_art"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="@+id/lbl_remitter_name"
+             app:layout_constraintTop_toBottomOf="@+id/lbl_remitter_name"
+             tools:text="Axis Finance Limited"
+             tools:textColor="@color/white" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/lbl_max_amount"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="@dimen/dimen_12"
+             android:fontFamily="@font/bw_modelica_regular"
+             android:textColor="@color/white"
+             android:textSize="@dimen/txt_dimen_11"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             tools:text="25000"
+             tools:textColor="@color/white" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/lbl_min_amount"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="@dimen/dimen_12"
+             android:fontFamily="@font/bw_modelica_regular"
+             android:textColor="@color/white"
+             android:textSize="@dimen/txt_dimen_11"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="@id/lbl_remitter_num"
+             tools:text="25000"
+             tools:textColor="@color/white" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+       android:id="@+id/swipe_refresh"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_constraintTop_toBottomOf="@+id/retailer_container"
+       app:layout_constraintBottom_toBottomOf="parent">
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rec_beneficiary"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       tools:listitem="@layout/view_holder_item_beneficiary"
+       tools:itemCount="5"
+       />
+
+   </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/fab_add_beneficiary"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/ic_add_circle_outline_24"
+       android:layout_marginEnd="@dimen/dimen_10"
+       android:layout_marginBottom="@dimen/dimen_10"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+       android:background="@color/float_icon_bg_color"
+       app:backgroundTint="@color/float_icon_bg_color"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_web"
+    app:startDestination="@id/webFragment">
+
+    <action
+        android:id="@+id/action_global_webFragment"
+        app:destination="@id/webFragment"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right" />
+
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.payment.ayushdigitils.ui.web.WebFragment"
+        android:label="WebFragment"
+        tools:layout="@layout/fragment_web">
+
+        <argument
+            android:name="url"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.operator.BillOperatorFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_back_3d"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginStart="@dimen/dimen_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_back_3d" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_dimen_20"
+        android:fontFamily="@font/bw_modelica_extra_bold"
+        android:textColor="@color/text_color"
+        android:layout_marginHorizontal="@dimen/dimen_15"
+        android:paddingHorizontal="@dimen/dimen_20"
+        android:layout_marginStart="@dimen/dimen_30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_back"
+        tools:text="Title"/>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view_provider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_50"
+        app:queryHint="search provider"
+        app:layout_constraintStart_toEndOf="@+id/lbl_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/search_view_provider"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!-- Please select atleast 3 category so we will create personalized exprieance for you. -->
+            <TextView
+                android:id="@+id/tv_please_sele"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginHorizontal="@dimen/dimen_15"
+                android:textSize="@dimen/txt_dimen_14"
+                android:textColor="#CDCCCD"
+                android:fontFamily="@font/bw_modelica_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_provider"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/tv_please_sele"
+                tools:listitem="@layout/view_holder_item_bill_provider"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/error_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible">
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent">
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/img_error"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_error_404"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               tools:src="@drawable/ic_error_404" />
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/lbl_error_message"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="Oops! The page you're looking for couldn't be found."
+               android:textSize="@dimen/txt_dimen_15"
+               android:gravity="center"
+               android:fontFamily="@font/bw_modelica_medium"
+               android:textColor="@color/black"
+               android:layout_marginTop="@dimen/dimen_10"
+               android:paddingHorizontal="@dimen/dimen_10"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/img_error"
+               tools:textColor="@color/black"
+               tools:text="Oops! The page you're looking for couldn't be found." />
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

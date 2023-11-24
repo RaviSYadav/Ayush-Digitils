@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragment.dashboard.AEPSHomeFragment">
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_result"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="bank_one.json"
+        app:lottie_loop="false"
+        app:lottie_speed="1.25"
+        android:paddingTop="-10dp"
+        android:elevation="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Select Scanner Device"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:paddingTop="13dp"
+        android:paddingHorizontal="20dp"
+        android:drawableLeft="@drawable/ic_touch_id"
+        android:drawableTint="@color/black"
+        android:drawablePadding="4dp"
+        android:background="@color/dashboard_icon_bg_color"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lav_result"
+        tools:text="Please Select Scanner Device" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_choose_you_device"
+        android:textSize="10sp"
+        android:paddingTop="4dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="13dp"
+        android:paddingHorizontal="20dp"
+        android:background="@color/dashboard_icon_bg_color"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_device"
+        tools:text="@string/please_choose_you_device" />
+
+    <com.airbnb.epoxy.EpoxyRecyclerView
+        android:id="@+id/rvAepsDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="15dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_description"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

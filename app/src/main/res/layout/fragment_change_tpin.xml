@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.profile.tpin.ChangeTPinFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/retailer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_15"
+        android:paddingBottom="@dimen/dimen_30"
+        android:background="@drawable/ic_rect_top_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/operator_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_15"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back_3d"
+                app:tint="@color/white"
+                android:elevation="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_back_3d" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_t_pin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_dimen_15"
+                android:fontFamily="@font/bw_modelica_bold"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:paddingStart="@dimen/dimen_40"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_back"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+                tools:textColor="@color/white" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lav_result"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_150"
+                android:layout_centerHorizontal="true"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="change_password.json"
+                app:lottie_loop="false"
+                app:lottie_speed="1.25"
+                android:paddingTop="-10dp"
+                android:elevation="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_back"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/dimen_15"
+        app:layout_constraintTop_toBottomOf="@+id/retailer_container"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lbl_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:hint="OTP">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:digits="0123456789"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lbl_new_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_otp"
+            android:layout_marginTop="15dp"
+            android:hint="New Pin">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_new_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:digits="0123456789"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lbl_confirm_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_new_pin"
+            android:layout_marginTop="15dp"
+            android:hint="Confirm Pin">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_confirm_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:digits="0123456789"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_get_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Otp"
+            android:textColor="#6765E8"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_confirm_pin"
+            android:layout_marginTop="15dp"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_proceed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:text="Proceed"
+            android:clickable="true"
+            android:layout_marginTop="30dp"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_confirm_pin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

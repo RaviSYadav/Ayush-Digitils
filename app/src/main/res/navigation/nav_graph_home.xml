@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/homeFragment">
+
+
+    <include app:graph="@navigation/nav_graph_invoice" />
+
+    <action
+        android:id="@+id/action_global_invoiceFragment"
+        app:destination="@id/nav_graph_invoice"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/homeFragment"
+        app:popUpToInclusive="false"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right"/>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.dashboard.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_dashboard_to_more_coming_soon"
+            app:destination="@id/comingSoonFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+
+        <action
+            android:id="@+id/action_dashboard_to_prepaid_recharge"
+            app:destination="@id/prepaidRechargeFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+
+        <action
+            android:id="@+id/action_dashboard_to_bill_operator"
+            app:destination="@id/billOperatorFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_MATMDashboardFragment"
+            app:destination="@id/MATMDashboardFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_DMTBottomFragment"
+            app:destination="@id/DMTBottomFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_DTHFragment"
+            app:destination="@id/DTHFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_aadhaar2AuthVerificationFragment"
+            app:destination="@id/aadhaar2AuthVerificationFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_AEPSFundFragment"
+            app:destination="@id/AEPSFundFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_walletFundFragment"
+            app:destination="@id/walletFundFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/comingSoonFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.ComingSoonFragment"
+        android:label="fragment_comingSoon"
+        tools:layout="@layout/fragment_comingsoon" />
+    <fragment
+        android:id="@+id/prepaidRechargeFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.prepaid.PrepaidRechargeFragment"
+        android:label="fragment_prepaidrecharge"
+        tools:layout="@layout/fragment_prepaidrecharge" >
+
+        <action
+            android:id="@+id/action_prepaid_recharge_to_prepaid_operator"
+            app:destination="@id/prepaidOperatorDialogFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+
+        <action
+            android:id="@+id/action_prepaid_recharge_to_success_fragment"
+            app:destination="@id/successFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/action_successFragment_to_prepaidRechargeFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+
+    </fragment>
+    <dialog
+        android:id="@+id/prepaidOperatorDialogFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.prepaid.provider.PrepaidOperatorDialogFragment"
+        android:label="PrepaidOperatorDialogFragment"
+        tools:layout="@layout/layout_dialog_prepaid_operator"/>
+    <fragment
+        android:id="@+id/billOperatorFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.operator.BillOperatorFragment"
+        android:label="fragment_billoperator"
+        tools:layout="@layout/fragment_billoperator" >
+
+        <argument
+            android:name="uniqueSlug"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
+
+
+        <action
+            android:id="@+id/action_bill_operator_to_fetch_bbps_bill_fragment"
+            app:destination="@id/fetchBBPSParamsAndBillFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.success.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" >
+
+        <argument
+            android:name="recharge"
+            app:argType="com.payment.ayushdigitils.data.remote.RechargePayResponse"
+            app:nullable="true"/>
+
+        <argument
+            android:name="number"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="amount"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="transection_type"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="date"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_successFragment_to_prepaidRechargeFragment"
+            app:destination="@id/prepaidRechargeFragment" />
+        <action
+            android:id="@+id/action_successFragment_to_DTHFragment"
+            app:destination="@id/DTHFragment" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/fetchBBPSParamsAndBillFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.bills.BillParamsFragment"
+        android:label="fragment_fetch_bbps_params_and_bill"
+        tools:layout="@layout/fragment_bill_params" >
+
+        <argument
+            android:name="provider_id"
+            app:argType="string"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_fetch_bbps_bill_fragment_to_show_billfetched_fragment"
+            app:destination="@id/showBillFetchedFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+    </fragment>
+    <dialog
+        android:id="@+id/showBillFetchedFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.bills.show.ShowBillFetchedFragment"
+        android:label="fragment_showbill_fetched"
+        tools:layout="@layout/fragment_showbill_fetched" >
+
+
+        <argument
+            android:name="bills_data"
+            app:argType="com.payment.ayushdigitils.data.remote.BillValidateData"
+            app:nullable="true"/>
+
+        <argument
+            android:name="provider_id"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="provider_name"
+            app:argType="string"
+            app:nullable="false" />
+        <argument
+            android:name="provider_type"
+            app:argType="string"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_show_fetch_bbps_bill_fragment_to_confirmed_fragment"
+            app:destination="@id/billConfirmFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+
+    </dialog>
+    <dialog
+        android:id="@+id/billConfirmFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.bills.confirmation.BillConfirmFragment"
+        android:label="fragment_billconfirm"
+        tools:layout="@layout/fragment_billconfirm" >
+        <argument
+            android:name="billers_data"
+            app:argType="com.payment.ayushdigitils.ui.fragments.bills.confirmation.BillProviderDetailsData" />
+
+        <action
+            android:id="@+id/action_bill_confirm_fragment_to_success_fragment"
+            app:destination="@id/successFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph_home"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+
+    </dialog>
+    <fragment
+        android:id="@+id/MATMDashboardFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.mtam.MATMDashboardFragment"
+        android:label="fragment_matm_dashboard"
+        tools:layout="@layout/fragment_matm_dashboard"
+        app:enterAnim="@anim/from_right"
+        app:exitAnim="@anim/to_left"
+        app:popEnterAnim="@anim/from_left"
+        app:popExitAnim="@anim/to_right"/>
+    <dialog
+        android:id="@+id/DMTBottomFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.dmt.DMTBottomFragment"
+        android:label="fragment_dmt_bottom"
+        tools:layout="@layout/fragment_dmt_bottom" >
+
+        <argument
+            android:name="dmt_type"
+            app:argType="string"
+            app:nullable="false"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+
+        <action
+            android:id="@+id/action_DMTBottomFragment_to_DMTOtpFragment"
+            app:destination="@id/DMTOtpFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+        <action
+            android:id="@+id/action_DMTBottomFragment_to_beneficiaryFragment"
+            app:destination="@id/beneficiaryFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+    </dialog>
+    <fragment
+        android:id="@+id/DMTOtpFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.dmt.validation.DMTOtpFragment"
+        android:label="fragment_dmtotp"
+        tools:layout="@layout/fragment_dmtotp" />
+    <fragment
+        android:id="@+id/beneficiaryFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.beneficiary.BeneficiaryFragment"
+        android:label="fragment_beneficiary"
+        tools:layout="@layout/fragment_beneficiary" >
+
+        <argument
+            android:name="remitter"
+            app:argType="com.payment.ayushdigitils.data.remote.NetworkPaySprintDmtVerifyData" />
+        <action
+            android:id="@+id/action_beneficiaryFragment_to_addBeneficiaryFragment"
+            app:destination="@id/addBeneficiaryFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+        <action
+            android:id="@+id/action_beneficiaryFragment_to_moneyTransactionFragment"
+            app:destination="@id/moneyTransactionFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/addBeneficiaryFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.beneficiary.add.AddBeneficiaryFragment"
+        android:label="fragment_addbeneficiary"
+        tools:layout="@layout/fragment_addbeneficiary" >
+        <argument
+            android:name="remitter"
+            app:argType="com.payment.ayushdigitils.data.remote.NetworkPaySprintDmtVerifyData" />
+    </fragment>
+    <fragment
+        android:id="@+id/moneyTransactionFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.transection.MoneyTransactionFragment"
+        android:label="MoneyTransactionFragment"
+        tools:layout="@layout/fragment_money_transection">
+
+
+        <argument
+            android:name="remitter"
+            app:argType="com.payment.ayushdigitils.data.remote.NetworkPaySprintDmtVerifyData" />
+
+
+        <argument
+            android:name="beneficiary"
+            app:argType="com.payment.ayushdigitils.data.remote.NetworkPaySprintBeneficiaryData" />
+        <action
+            android:id="@+id/action_moneyTransactionFragment_to_paySprintDmtInvoiceFragment"
+            app:destination="@id/paySprintDmtInvoiceFragment"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="false"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/paySprintDmtInvoiceFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.dmt.invoice.PaySprintDmtInvoiceFragment"
+        android:label="fragment_paysprint_dmt_invoice"
+        tools:layout="@layout/fragment_paysprint_dmt_invoice" >
+
+        <argument
+            android:name="remitter"
+            app:argType="com.payment.ayushdigitils.data.remote.NetworkPaySprintDmtVerifyData" />
+
+        <argument
+            android:name="beneficiary"
+            app:argType="com.payment.ayushdigitils.data.remote.NetworkPaySprintBeneficiaryData" />
+        <argument
+            android:name="transaction"
+            app:argType="com.payment.ayushdigitils.data.remote.PaySprintMoneyTransactionResponse" />
+
+        <argument
+            android:name="total_amount"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/DTHFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.dth.DTHFragment"
+        android:label="fragment_dth"
+        tools:layout="@layout/fragment_dth" >
+        <action
+            android:id="@+id/action_DTHFragment_to_successFragment"
+            app:destination="@id/successFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/action_successFragment_to_DTHFragment"
+            app:popUpToInclusive="false"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/aadhaar2AuthVerificationFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.aadhar2fa.Aadhaar2AuthVerificationFragment"
+        android:label="fragment_aadhar2_auth_verification"
+        tools:layout="@layout/fragment_aadhar2_auth_verification" />
+    <fragment
+        android:id="@+id/AEPSFundFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.payout.aeps.AEPSFundFragment"
+        android:label="fragment_aeps_fund"
+        tools:layout="@layout/fragment_aeps_fund" />
+    <fragment
+        android:id="@+id/walletFundFragment"
+        android:name="com.payment.ayushdigitils.ui.fragments.payout.wallet.WalletFundFragment"
+        android:label="fragment_wallet_fund"
+        tools:layout="@layout/fragment_wallet_fund" />
+
+
+</navigation>

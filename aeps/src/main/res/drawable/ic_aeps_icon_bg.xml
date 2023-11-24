@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="141dp"
+    android:height="101dp"
+    android:viewportWidth="141"
+    android:viewportHeight="101">
+    <group>
+        <clip-path
+            android:pathData="M14,0L127,0A14,14 0,0 1,141 14L141,87A14,14 0,0 1,127 101L14,101A14,14 0,0 1,0 87L0,14A14,14 0,0 1,14 0z"/>
+        <path
+            android:pathData="M14,0L127,0A14,14 0,0 1,141 14L141,87A14,14 0,0 1,127 101L14,101A14,14 0,0 1,0 87L0,14A14,14 0,0 1,14 0z"
+            android:fillColor="@color/dashboard_icon_bg_color"/>
+    </group>
+</vector>

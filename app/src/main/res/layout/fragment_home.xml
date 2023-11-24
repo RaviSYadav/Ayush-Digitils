@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ui.fragments.dashboard.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:layout_marginBottom="@dimen/dimen_8"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingEnd="@dimen/dimen_20"
+                android:paddingStart="@dimen/dimen_20"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs_indicator"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_20"
+                android:layout_gravity="bottom"
+                app:layout_constraintEnd_toEndOf="@+id/viewPager"
+                app:layout_constraintStart_toStartOf="@+id/viewPager"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager"
+                app:tabGravity="center"
+                android:visibility="gone"
+                app:tabIndicatorGravity="bottom"
+                app:tabIndicatorHeight="0dp" />
+
+
+
+            <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/rvDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                tools:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/tabs_indicator"
+                tools:spanCount="4"
+                tools:listitem="@layout/view_holder_item_finance"
+                tools:itemCount="36"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

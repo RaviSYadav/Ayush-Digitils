@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_aeps"
+    app:startDestination="@id/AEPSHomeFragment">
+
+    <fragment
+        android:id="@+id/AEPSHomeFragment"
+        android:name="com.payment.aeps.fragment.dashboard.AEPSHomeFragment"
+        android:label="fragment_aepshome"
+        tools:layout="@layout/fragment_aepshome" >
+        <action
+            android:id="@+id/action_AEPSHomeFragment_to_cashWithdrawFragment"
+            app:destination="@id/cashWithdrawFragment"
+            app:enterAnim="@anim/from_aeps_right"
+            app:exitAnim="@anim/to_aeps_left"
+            app:popEnterAnim="@anim/from_aeps_left"
+            app:popExitAnim="@anim/to_aeps_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/cashWithdrawFragment"
+        android:name="com.payment.aeps.fragment.cash.CashWithdrawFragment"
+        android:label="fragment_cashwithdraw"
+        tools:layout="@layout/fragment_cashwithdraw" >
+
+        <argument
+            android:name="aeps_dashboard"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="transaction_type"
+            app:argType="string"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_cashWithdrawFragment_to_banksFragment"
+            app:destination="@id/banksFragment"
+            />
+        <action
+            android:id="@+id/action_cashWithdrawFragment_to_AEPSInvoiceFragment"
+            app:destination="@id/AEPSInvoiceFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/AEPSHomeFragment"
+            app:popUpToInclusive="false"
+            app:enterAnim="@anim/from_aeps_right"
+            app:exitAnim="@anim/to_aeps_left"
+            app:popEnterAnim="@anim/from_aeps_left"
+            app:popExitAnim="@anim/to_aeps_right"
+            />
+    </fragment>
+    <dialog
+        android:id="@+id/banksFragment"
+        android:name="com.payment.aeps.fragment.bank.BanksFragment"
+        android:label="fragment_banks"
+        tools:layout="@layout/fragment_banks" />
+    <fragment
+        android:id="@+id/AEPSInvoiceFragment"
+        android:name="com.payment.aeps.fragment.invoice.AEPSInvoiceFragment"
+        android:label="fragment_aeps_invoice"
+        tools:layout="@layout/fragment_aeps_invoice" >
+
+        <argument
+            android:name="aeps_invoice"
+            app:argType="com.payment.aeps.remote.AepsResponse" />
+        <action
+            android:id="@+id/action_AEPSInvoiceFragment_to_AEPSHomeFragment"
+            app:destination="@id/AEPSHomeFragment" />
+
+    </fragment>
+</navigation>

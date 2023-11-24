@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/dimen_15"
+    android:paddingHorizontal="@dimen/dimen_15"
+    android:layout_marginTop="@dimen/dimen_5"
+    android:layout_marginHorizontal="@dimen/dimen_5"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_account_rectangle">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_art"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_circle_bg"
+        android:src="@drawable/ic_bank"
+        tools:src="@drawable/ic_bank"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_bank_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_dimen_15"
+        android:fontFamily="@font/bw_modelica_bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/dimen_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_art"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textColor="@color/black"
+        tools:text="@tools:sample/lorem" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_account_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_dimen_14"
+        android:fontFamily="@font/bw_modelica_medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dimen_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lbl_bank_name"
+        app:layout_constraintTop_toBottomOf="@id/lbl_bank_name"
+        tools:textColor="@color/black"
+        tools:text="@tools:sample/lorem" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_ifsc_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_dimen_14"
+        android:fontFamily="@font/bw_modelica_medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dimen_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lbl_bank_name"
+        app:layout_constraintTop_toBottomOf="@id/lbl_account_number"
+        tools:textColor="@color/black"
+        tools:text="@tools:sample/lorem" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
